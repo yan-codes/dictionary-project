@@ -1,15 +1,21 @@
 import logo from "./assets/dicodes_logo.png";
 import "./App.css";
+import Dictionary from "./Dictionary.jsx";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo img-fluid" alt="logo" />
-        <a href="#" className="btn btn-primary shadow">
-          Hello
-        </a>
-      </header>
+      <div className="container">
+        <header className="App-header">
+          <img src={logo} className="App-logo img-fluid" alt="logo" />
+        </header>
+        <main>
+          <Dictionary />
+        </main>
+        <footer className="App-footer">
+          <small>Coded by Dianne Louise</small>
+        </footer>
+      </div>
     </div>
   );
 }
