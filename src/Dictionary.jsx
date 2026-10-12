@@ -5,9 +5,11 @@ import Results from "./Results";
 
 export default function Dictionary() {
   let [word, setWord] = useState("");
+  let [results, setResults] = useState({});
 
   function handleResponse(response) {
     console.log(response.data.meanings[0]);
+    setResults(response.data.meaning);
   }
 
   function search(event) {
@@ -26,7 +28,7 @@ export default function Dictionary() {
       <form onSubmit={search}>
         <input type="search" onChange={handleWordChange} />
       </form>
-      <Results />
+      <Results results={results} />
     </div>
   );
 }
