@@ -2,6 +2,8 @@ import React from "react";
 
 export default function Results(props) {
   console.log(props.results);
-  return;
+  if (props.results) {
+  return (
   <div className="Results">Hello</div>;
+  );
 }
