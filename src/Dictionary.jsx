@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Dictionary.css";
-import Results from "./Results";
+import Results from "./Results.jsx";
 
 export default function Dictionary() {
   let [word, setWord] = useState("");
-  let [results, setResults] = useState({});
+  let [results, setResults] = useState(null);
 
   function handleResponse(response) {
-    console.log(response.data.meanings[0]);
-    setResults(response.data.meanings);
+    console.log(response.data);
+    setResults(response.data);
   }
 
   function search(event) {
